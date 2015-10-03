@@ -1,0 +1,50 @@
+{
+    "CIA": 
+    {
+        "Name"      : "Centro de Información y Atención a Alumnos (Rectoría)",
+        "Abrev"     : "CIA",
+        "latX"      : "",
+        "latY"      : "",
+        "Specs"     : ""
+    },
+    "Biblio" :
+    {
+        "Name"      : "Biblioteca UDEM",
+        "Abrev"     : "",
+        "latX"      : "",
+        "latY"      : "",
+        "Specs"     : ""
+    },
+    "CC" :
+    {
+        "Name"      : "Centro de la Comunidad",
+        "Abrev"     : "",
+        "latX"      : "",
+        "latY"      : "",
+        "Specs"     : ""
+    },
+    "Theater" :
+    {
+        "Name"      : "Teatro UDEM",
+        "Abrev"     : "",
+        "latX"      : "",
+        "latY"      : "",
+        "Specs"     : ""
+    },
+    "CGS" : 
+    {
+        "Name"      : "Centro Roberto Garza Sada",
+        "Abrev"     : "CGS",
+        "latX"      : "",
+        "latY"      : "",
+        "Specs"     : ""
+    },
+    "Sports" :
+    {
+        "Name"      : "Centro Deportivo",
+        "Abrev"     : "",
+        "latX"      : "",
+        "latY"      : "",
+        "Specs"     : ""
+    }
+}
