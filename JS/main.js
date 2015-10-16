@@ -8,4 +8,5 @@ function loadContents() {
 
 	$('#year').append(year);
 	$('#maps-year').append(year);
+    $('#map').attr('src', UDEM_LOC_MAP);
 }

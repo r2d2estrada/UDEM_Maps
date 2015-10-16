@@ -4,35 +4,44 @@
 		<meta charset="UFT-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="Web Mobile app">
-		<meta name="author" content="Alejandro Valadez Bastien">
-		<meta name="keywords" content="Mobile, iOS, Objective-C, UDEM, Maps">
+		<meta name="author" content="Arturo Estrada">
+		<meta name="keywords" content="Mobile, iOS, Objective-C, UDEM, Maps, UDEM Maps">
 		<meta name="version" content="1.1">
 		
 		<link rel="stylesheet" href="CSS/style.css" type="text/css"/>
 
 		<script type="text/javascript" src="JS/jquery-1.11.3.min.js"></script>
 		<script type="text/javascript" src="JS/main.js"></script>
+        <script type="text/javascript" src="data/locations.js"></script>
 
 	</head>
 	<body>
-		<div id="container">
-			<header></header>
-			<article class="content">
-				<div class="title"><div>
-				
-                <iframe src="https://www.google.com/maps/embed?pb=!1m36!1m12!1m3!1d4155.367302523819!2d-100.42095202245028!3d25.661143667340507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m21!3e2!4m3!3m2!1d25.6620714!2d-100.4184868!4m5!1s0x8662bd5dcc519e6d%3A0x8d275c8a33ec1fb3!2sUniversidad+De+Monterrey+Avenida+Ignacio+Morones+Prieto+4500+Pte.!3m2!1d25.662837!2d-100.419921!4m5!1s0x0%3A0x0!2s25.661239%2C-100.419523!3m2!1d25.661239!2d-100.419523!4m3!3m2!1d25.6614906!2d-100.4204025!5e1!3m2!1ses!2smx!4v1443163334717" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <header class="header">
+            <div class="inside-header">
+                <img id="appMenu" class="menu-icon" src="icons/menu48.png" />
+
+            </div>
+        </header>
+
+		<div class="container">
+
+            <div class="title">
+                <h3>Title Test</h3>
+            </div>
+
+            <div class="frame-container">
+                <iframe id="map" class="map-frame" src="" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
                     
-				<div id="map-footer" class="small-left">
-					<span>Powered by Google</span>
-					<span id="maps-year"></span>
+                <div id="map-footer" class="small-right">
+				    <span>Powered by Google</span>
+				    <span id="maps-year"></span>
 				</div>
-			</article>
-			<footer>
-				<span class="small-left">
-					&copy; UDEM
-                </span>
-				<span id="year" class="small-left"></span>
-			</footer>
+            </div>
 		</div>
+
+        <footer class="appFooter">
+            <span class="small-left">&copy; UDEM</span>
+            <span id="year" class="small-left"></span>
+        </footer>
 	</body>
 </html>
