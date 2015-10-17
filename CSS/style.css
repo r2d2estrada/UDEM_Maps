@@ -40,8 +40,8 @@ body {
     text-align: left;
     font-family: sans-serif;
     line-height: 10px;
-    -webkit-margin-before: 0px;
-    -webkit-margin-after: 0px;
+    -webkit-margin-before: 2px;
+    -webkit-margin-after: 2px;
 }
 
 .frame-container {
