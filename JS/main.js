@@ -1,5 +1,14 @@
 $(document).ready(function(){
-	loadContents();
+	if (navigator.online === false) {
+        swal ({
+            title: "No hay conexión a internet datos",
+            text: "Para el funcionamiento de UDEM MAPS es necesario estar conectado a la red (3G, 4G, Edge etc) o estar conectado a una red de wifi. Asegúrese de estar conectad@ y reinicie la aplicación.",
+            type: "error",
+            confirmButtonText: "Entendido"
+        });
+    } else {
+        loadContents();
+    }
 });
 
 function loadContents() {
