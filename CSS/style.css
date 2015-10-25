@@ -28,7 +28,11 @@ body {
     margin: 5px auto;
 }
 
-.float-left {
+.appLogo {
+    margin: 4px 10px 0;
+}
+
+.float-right {
     float: right;
 }
 

@@ -5,28 +5,52 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="Web Mobile app">
 		<meta name="author" content="Arturo Estrada">
-		<meta name="keywords" content="Mobile, iOS, Objective-C, UDEM, Maps, UDEM Maps">
+		<meta name="keywords" content="Mobile, iOS, Android, UDEM, Maps, UDEM Maps">
 		<meta name="version" content="1.1">
 		
-		<link rel="stylesheet" href="CSS/style.css" type="text/css"/>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/font-awesome.min.css">
+        <link rel="stylesheet" href="CSS/sidebar-bootstrap.css">
+        <link rel="stylesheet" href="CSS/sidebar.css">
+        <link rel="stylesheet" href="CSS/style.css" type="text/css" />
 
 		<script type="text/javascript" src="JS/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="JS/hammer.js"></script>
+        <script type="text/javascript" src="JS/sidebar.js"></script>
 		<script type="text/javascript" src="JS/main.js"></script>
         <script type="text/javascript" src="data/locations.js"></script>
 
 	</head>
 	<body>
-        <header class="header">
-            <div class="inside-header">
-                <img id="appMenu" class="menu-icon" src="icons/menu48.png" />
-                <img id="logo-udem" class="float-left" src="icons/placaUDEM4mobile.jpg" />
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header float-right">
+                    <img id="logo-udem" class="appLogo" src="icons/placaUDEM4mobile.jpg" />
+                </div>
             </div>
-        </header>
+        </nav>
+
+        <!--Navigation Menu -->
+        <div data-sidebar="true" class="sidebar-trigger">
+            <a class="sidebar-toggle" href="#">
+                <span class="sr-only">Sidebar toggle</span>
+                <i class="fa fa-sidebar-toggle"></i>
+            </a>
+
+            <div class="sidebar-wrapper sidebar-default">
+                <div class="sidebar-scroller">
+
+                </div>
+            </div>
+        </div>
 
 		<div class="container">
 
             <div class="title">
-                <h3>Title Test</h3>
+                <h3>Campus Universitario</h3>
             </div>
 
             <div class="frame-container">
@@ -39,11 +63,5 @@
             </div>
 		</div>
 
-        <!--footer class="appFooter">
-            <div class="footer-inside">
-                <span class="small-left">&copy; UDEM</span>
-                <span id="year" class="small-left"></span>
-            </div>
-        </footer-->
 	</body>
 </html>
