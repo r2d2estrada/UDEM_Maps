@@ -4,24 +4,26 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="Web Mobile app">
 		<meta name="author" content="Arturo Estrada">
-		<meta name="keywords" content="Mobile, iOS, Android, UDEM, Maps, UDEM Maps">
+		<meta name="keywords" content="Mobile, iOS, Android, UDEM, Maps, UDEM Maps, PhoneGap">
 		<meta name="version" content="1.1">
 		
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="CSS/bootstrap.min.css">
-        <link rel="stylesheet" href="CSS/font-awesome.min.css">
-        <link rel="stylesheet" href="CSS/sidebar-bootstrap.css">
-        <link rel="stylesheet" href="CSS/sidebar.css">
-        <link rel="stylesheet" href="sweetalert/dist/sweetalert.css">
+        <link rel="stylesheet" href="CSS/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="CSS/sidebar-bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="CSS/sidebar.css" type="text/css">
+        <link rel="stylesheet" href="sweetalert/dist/sweetalert.css" type="text/css">
+        <link rel="stylesheet" href="DataTables/media/css/jquery.dataTables.min.css" type="text/css">
         <link rel="stylesheet" href="CSS/style.css" type="text/css">
 
 		<script type="text/javascript" src="JS/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript" src="JS/jquery.ui.map.full.min.js"></script>
         <script type="text/javascript" src="JS/hammer.js"></script>
         <script type="text/javascript" src="JS/sidebar.js"></script>
         <script type="text/javascript" src="sweetalert/dist/sweetalert.min.js"></script>
+        <script type="text/javascript" src="DataTables/media/js/jquery.dataTables.min.js"></script>
 		<script type="text/javascript" src="JS/main.js"></script>
         <script type="text/javascript" src="data/locations.js"></script>
-
 	</head>
 	<body>
 
@@ -41,21 +43,33 @@
                 <i class="fa fa-sidebar-toggle"></i>
             </a>
 
-            <div class="sidebar-wrapper sidebar-default">
+            <div id="appSideBar" class="sidebar-wrapper sidebar-default">
                 <div class="sidebar-scroller">
-
+                    <table id="locationsTBL" class="display" width="100%">
+                        <thead>
+                            <tr>
+                                <th><img class="center-icon" src="icons/directions7.png"></td>
+                                <th>Nombre</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-		<div class="container">
+		<!-- Map, place title and other labels -->
+        <div class="container">
 
+            <!-- Place title -->
             <div class="title">
-                <h3>Campus Universitario</h3>
+                <h3 id="titleToAppend"></h3>
             </div>
 
+            <!-- MAP -->
             <div class="frame-container">
-                <iframe id="map" class="map-frame" src="" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                <div id="map_canvas" class="map-frame"></div>
                     
                 <div id="map-footer" class="small-right">
 				    <span>Powered by Google</span>
@@ -63,6 +77,11 @@
 				</div>
             </div>
 		</div>
+
+        <!-- Place description -->
+        <div class="place-description">
+            <p id="placeToDescribe"></p>
+        </div>
 
 	</body>
 </html>
